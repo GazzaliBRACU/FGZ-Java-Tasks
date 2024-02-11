@@ -1,0 +1,17 @@
+{
+  "name": "Java and General Development Environment",
+  "settings": {
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.fontSize": 25,
+    "editor.mouseWheelZoom": true,
+    "workbench.colorTheme": "Default Light+"
+  },
+  "extensions": [
+    "vscjava.vscode-java-pack",
+    "usernamehw.errorlens",
+    "mhutchie.git-graph"
+  ],
+  "forwardPorts": [],
+  "postCreateCommand": "",
+  "remoteUser": "vscode"
+}
