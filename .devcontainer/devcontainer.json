@@ -1,6 +1,6 @@
 {
   "name": "Java and General Development Environment",
-  "image": "mcr.microsoft.com/vscode/devcontainers/java:0-11",
+  "image": "mcr.microsoft.com/devcontainers/java",
   "settings": {
     "editor.fontFamily": "Consolas, 'Courier New', monospace",
     "editor.fontSize": 25,
