@@ -1,44 +1,31 @@
-// Version: 1.0
-// Set A
-// Lab Quiz 4: Library
-// Scheduled: 9th July'24; Tue 11 AM
-
 public class Library {
-    // Fields
-    private String title;
-    private String status = "available";
-    private String isbn;
+    public static void main(String[] args) {
+        Book book1 = new Book();
+        book1.setTitle("Baby Shark");
+        book1.printStatus();  // Should prompt to set ISBN first
+        book1.setISBN("9876543210");
+        book1.setTitle("Baby Shark");
+        book1.printStatus();
+        book1.updateStatus("borrowed");
+        System.out.println("After update 1:");
+        book1.printStatus();
+        book1.updateStatus("borrowed");
+        System.out.println("After update 2:");
+        book1.printStatus();
+        book1.updateStatus("reserved");
+        book1.updateStatus("borrowed");
+        System.out.println("After update 3:");
+        book1.printStatus();
 
-    public void setTitle(String title) {
-        if (isbn != null) {
-            this.title = title;
-        }
-        else {
-            System.out.println("Please set ISBN first.");
-        }
-    }
-
-    public void setISBN(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public void updateStatus(String newStatus) {
-        if (status.equals("available")){
-            status = newStatus;
-        }
-        else if (!status.equals("available") && newStatus.equals("available")) {
-            status = newStatus;
-        }
-        else {
-            System.out.println(this.title + " won't be " + newStatus + " since it is currently " + status + ".");
-        }
-    }
-
-    public void printStatus() {
-        if (isbn == null) {
-            System.out.println("Please set ISBN first.");
-        } else {
-            System.out.println(title + " with ISBN " + isbn + " is currently " + status + ".");
-        }
+        System.out.println("*********************************");
+        
+        Book book2 = new Book();
+        book2.setISBN("0123456789");
+        book2.setTitle("Humpty Dumpty");
+        book2.printStatus();
+        book2.updateStatus("reserved");
+        System.out.println("After update 4:");
+        book2.printStatus();
+        book2.updateStatus("borrowed");  // Should not allow as it's reserved
     }
 }
